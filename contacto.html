@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO | CONTACTO</title>
+</head>
+
+<body>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad">
+
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Datos de Contacto</legend>
+
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo">
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <select for="provincia">
+                <option value="cadiz">Cádiz</option>
+                <option value="almeria">Almeria</option>
+                <option value="jaen">Jaén</option>
+                <option value="sevilla">Sevilla</option>
+                <option value="huelva">Huelva</option>
+                <option value="malaga">Málaga</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="granada">Granada</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información del curso</legend>
+
+            <input type="radio" id="modalidad" name="modalidad" value="presencial">
+            <label for="modalidad">Presencial</label>
+
+            <input type="radio" id="modalidad" name="modalidad" value="telematico">
+            <label for="modalidad">Telemático</label>
+
+            <input type="radio" id="modalidad" name="modalidad" value="hibrido">
+            <label for="modalidad">Híbrido</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Intereses</legend>
+            <input type="checkbox" id="interes" name="interes" value="redes">
+            <label for="interes">Redes</label>
+
+            <input type="checkbox" id="interes" name="interes" value="paginaswebs">
+            <label for="interes">Páginas Webs</label>
+
+            <input type="checkbox" id="interes" name="interes" value="servidores">
+            <label for="interes">Servidores</label>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Observaciones</legend>
+            <textarea rows="7" name="observaciones" placeholder="Escribe aquí"></textarea>
+        </fieldset>
+
+<button type="submit">Completar formulario</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+</body>
+
+</html>
