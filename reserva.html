@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva | Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required minlength="3" autofocus>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" required minlength="3">
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" name="email" required placeholder="ejemplo@gmail.com">
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" name="telefono" maxlength="9">
+
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" min="18" max="100">
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Datos de la Reserva</legend>
+
+            <select for="tipo_habitacion" name="tipo_habitacion">
+                <option value="individual">Indivudual</option>
+                <option value="doble">Doble</option>
+                <option value="familiar">Familiar</option>
+            </select>
+
+            <label for="fecha_llegada">Fecha de llegada:</label>
+            <input type="date" name="fecha_llegada">
+
+            <label for="num_huespedes">Nº de huespedes:</label>
+            <input type="number" min="1" max="6" name="num_huespedes">
+
+            <input type="radio" name="regimen" value="solo_alojamiento" checked>
+            <label for="regimen">Solo Alojamiento</label>
+
+            <input type="radio" name="regimen" value="desayuno_incluido">
+            <label for="regimen">Desayuno Incluido</label>
+
+            <input type="radio" name="regimen" value="media_pension">
+            <label for="regimen">Media Pensión</label>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Servicios Adicionales</legend>
+
+            <input type="checkbox" name="extras" value="aparcamiento">
+            <label for="extras">Aparcamiento</label>
+
+            <input type="checkbox" name="extras" value="cuna">
+            <label for="extras">Cuna</label>
+
+            <input type="checkbox" name="extras" value="servicio_lavanderia">
+            <label for="extras">Servicio de Lavanderia</label>
+
+            <input type="checkbox" name="extras" value="visita_guiada">
+            <label for="extras">Visita Guiada</label>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Información adicional</legend>
+
+            <label for="codigo_reserva">Código de reserva:</label>
+            <input type="text" name="codigo_reserva" value="CR2026" readonly>
+
+            <label for="descuento_promocional">Descuento Promocional</label>
+            <input type="text" name="descuento_promocional" value="NO DISPONIBLE" disabled>
+
+            <label for="codigo_cliente">Código de cliente</label>
+            <input type="number" name="codigo_cliente" pattern="[0-9]{6}" required>
+
+        </fieldset>
+
+        <br>
+
+        <button type="submit">CONFIRMAR RESERVA</button>
+        <br>
+        <button type="reset">BORRAR TODO</button>
+        <br>
+    
+
+    <button type="button" popovertarget="informacion">
+        Más Información
+    </button>
+
+    <div id="informacion" popover>
+        <h2>Hotel Los Álamos</h2>
+        <p>Tiene muchas habitaciones y psicinas privadas o spa incluido</p>
+
+        <button type="button" popovertarget="informacion" popovertargetaction="hide">
+            Cerrar
+        </button>
+    </div>
+
+
+    </form>
+
+
+
+
+</body>
+
+</html>
